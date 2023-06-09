@@ -1,23 +1,12 @@
-import logo from './logo.svg';
+import YourImage from './YourImage';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Let Me Gif What I Want</h1>  
+      <p>Whether or not you can skip a day of school/work/whatever to . . . . please recreate your own profound stare into the artistic ether. You may follow in Cameron's footsteps and get lost in dots, or browse other paintings from the Art Instituate of Chicago.</p>
+      <YourImage />
     </div>
   );
 }
