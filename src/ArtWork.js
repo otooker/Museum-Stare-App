@@ -1,6 +1,6 @@
 
 export default function ArtWorkChoice (props) {
-    const {artwork} = props;
+    const { artwork } = props;
     const { title, id, artist_display, date_display, image_id } = artwork;
 
     function onSelect(){

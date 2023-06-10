@@ -3,13 +3,13 @@ import Webcam from "react-webcam";
 import { useCallback, useRef, useState } from "react";
 
 // JSX to display your image
-//TODO: spot for image, upload button, take photo button
+//TODO: spot for image, upload button, take photo button, make webcame disappear when photo taken, make retake button
 
 export default function YourImage() {
 
     const webcamCapture = useRef(null);
     const [imageSource, setImageSource] = useState(null);
-    // figure out what the any means because I am perplexed but I want to see if this code works
+   
 
     const capture = useCallback(() => {
         const imgSrc = webcamCapture.current.getScreenshot();
@@ -28,7 +28,7 @@ export default function YourImage() {
             <button onClick={capture} >Take Selfie</button>
             {imageSource && <div>
                 <h2>Your Photo here:</h2>
-                <img src={imageSource} alt="selfie" />
+                <img src={imageSource} alt="selfie" imageId="imageId"/>
                 </div>}
             <input type="file" accept="image/*" />
         </div>
