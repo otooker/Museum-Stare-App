@@ -1,3 +1,4 @@
+//TODO: figure out how to pass the image to End Creation, 
 
 export default function ArtWorkChoice (props) {
     const { artwork } = props;
@@ -18,6 +19,8 @@ export default function ArtWorkChoice (props) {
     )
 }
 
+
+//TODO STYLING: can I add like a golden frame around the artwork?, also make the search images smaller maybe, highlight a boarder around selected artwork
 
 /* 
 

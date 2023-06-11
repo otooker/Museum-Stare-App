@@ -2,8 +2,7 @@ import React from "react";
 import Webcam from "react-webcam";
 import { useCallback, useRef, useState } from "react";
 
-// JSX to display your image
-//TODO: spot for image, upload button, take photo button, make webcame disappear when photo taken, make retake button
+//TODO: make retake button for webcam, upload button -- display photo uploaded. Props will be used to transfer img? ???
 
 export default function YourImage() {
 
@@ -16,9 +15,7 @@ export default function YourImage() {
         setImageSource(imgSrc);
     }, [webcamCapture, setImageSource]);
 
-    function clearSelfie(){
-       
-    }
+    const clearSelfie = 
 
     return (
         <div>
@@ -43,4 +40,4 @@ export default function YourImage() {
 };
 
 
-//TODO: in styling, make a min/max for the webcame and picture, change the image from displaying 
+//TODO STYLING: make a min/max for the webcam and picture, imitate Ferris Bueller red for title
