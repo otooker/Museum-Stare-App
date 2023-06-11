@@ -16,19 +16,26 @@ export default function YourImage() {
         setImageSource(imgSrc);
     }, [webcamCapture, setImageSource]);
 
+    function clearSelfie(){
+       
+    }
 
     return (
         <div>
-            <Webcam
+            {!imageSource &&
+            <div> 
+            <Webcam 
                 audio={false}
                 width={843}
                 screenshotFormat="image/jpeg"
                 ref={webcamCapture}
             />
-            <button onClick={capture} >Take Selfie</button>
+            <button onClick={capture} >Take Selfie</button> </div>}
+            
             {imageSource && <div>
                 <h2>Your Photo here:</h2>
                 <img src={imageSource} alt="selfie" imageId="imageId"/>
+                <button onClick={clearSelfie}>Retake Selfie</button>
                 </div>}
             <input type="file" accept="image/*" />
         </div>
