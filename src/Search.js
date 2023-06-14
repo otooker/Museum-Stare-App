@@ -7,18 +7,22 @@ import ArtWorkChoice from "./ArtWork";
 export default function SearchArt() {
     const [searchInput, setSearchInput] = useState('');
     const [artwork, setArtwork] = useState([]);
+    const [artid, setArtid] = useState([]);
+
+    //setID should go through props
     
     useEffect(() => {
         if (searchInput) {
-            fetch(`https://api.artic.edu/api/v1/artworks/search?q=${searchInput}&query[term][is_public_domain]=true&limit=20&fields=id,title,artist_display,date_display,image_id`)
+            fetch(`https://api.artic.edu/api/v1/artworks/search?q=${searchInput}&query[term][is_public_domain]=true&limit=5&fields=id,title,artist_display,date_display,image_id`)
                 .then(results => results.json())
                // .then(results => console.log(results))
                 .then(data => {
-                    console.log(data.data);
+                    //console.log(data.data);
                     setArtwork([...artwork, ...data.data])}
                     );
         }
-    }, [searchInput]);
+        //LOGIC
+    }, [searchInput, artid]);
 
     function handleArtSearchSubmit(e) {
         e.preventDefault();
@@ -27,20 +31,17 @@ export default function SearchArt() {
 
 
     return (
-        <div className="ArtWorkSearch">
+        <div className="ArtWorkSearch" id="artworksearch">
             <form onSubmit={handleArtSearchSubmit}>
                 <input type="text" id="art-search"/>
                 <button >Search</button>
             </form>
-            <p>Search result(s) for '{searchInput}'</p>
             <div className="artworkinfodisplay">
-                {artwork.map(artwork => <ArtWorkChoice artwork={artwork} />)}
+                {artwork.map(artwork => <ArtWorkChoice artwork={artwork} setArtid={setArtid} />)}
             </div>
         </div>
     )
 }
-
-
-
-/// this is to search Chicago's API. Offer random as well as search specifics 
-// Artwork will have what props we're going to display
+// useState here  for id, leave empty 
+//use effect dependency on id
+//toggle here 

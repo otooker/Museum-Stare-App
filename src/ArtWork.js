@@ -1,55 +1,44 @@
 //TODO: figure out how to pass the image to End Creation, 
 
-export default function ArtWorkChoice (props) {
+import React from "react";
+
+
+export default function ArtWorkChoices (props) {
     const { artwork } = props;
     const { title, id, artist_display, date_display, image_id } = artwork;
 
-    function onSelect(){
-        //passes the selected id onto the next phase, which is EndCreation
-    }
-   
+   // possible callback option --- need to grab the id of the selected artwork so it can be used in the next child 
+    function handleSelectClick(e){
+        e.preventDefault();
 
+        console.log(e.target.attributes.selectorid)
+
+    }
+
+    //load selected false, display. load true 
     return (
-        <div className="artinfo" key={id}>
+        <div id="artworkcontainer">
+        {image_id &&  <div className="artinfo" id={id}>
+            <img id="artimage" src={`https://www.artic.edu/iiif/2/${image_id}/full/843,/0/default.jpg`}/>
             <h3>{title}</h3>
             <p>artist: {artist_display}, date: {date_display} </p> 
-            <button onClick={onSelect} id={id}>Select this piece of art</button>
-            <img src={`https://www.artic.edu/iiif/2/${image_id}/full/843,/0/default.jpg`}/>
+            <button onClick={handleSelectClick} selectorid={id} >Select this piece of art</button>
+        </div>}
         </div>
-    )
-}
+        )}
 
 
 //TODO STYLING: can I add like a golden frame around the artwork?, also make the search images smaller maybe, highlight a boarder around selected artwork
+/*
 
-/* 
-
-src={`https://www.artic.edu/iiif/2/{id}/full/843,/0/default.jpg`}
-
-    const [artwork, setArtwork] =  useState([]);
-
-    const fetchArtwork = () => {
-        fetch("https://api.artic.edu/api/v1/artworks/24645/")
-            .then(response => {
-                return response.json()
-            })
-            .then(data => 
-                setArtwork(data))
+class ArtWorkChoices extends React.Component{
+    constructor(props) {
+        super(props);
+        this.state = {id: 27992}
     }
+}
 
-    useEffect(() => {
-        fetchArtwork()
-    }, [])
-
-
-an attempt to display data, and I know it's wrong
-       {artwork.length > 0 && (
-        <ul>
-          {artwork.map(artwork => (
-            <li key={artwork.id}>{artwork.title}</li>
-          ))}
-        </ul>
-      )}
+useEffect????? for the sleect button?????
 
 
 */
