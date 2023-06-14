@@ -16,15 +16,17 @@ export default function YourImage() {
         setImageSource(imgSrc);
     }, [webcamCapture, setImageSource]);
 
+    //retake selfie button functionality 
+
     return (
         <div>
             {!imageSource &&
             <div> 
             <Webcam 
                 audio={false}
-                width={843}
                 screenshotFormat="image/jpeg"
                 ref={webcamCapture}
+                id="webcam"
             />
             <button onClick={capture} >Take Selfie</button> </div>}
             

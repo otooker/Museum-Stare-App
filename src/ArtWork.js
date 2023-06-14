@@ -1,18 +1,16 @@
-//TODO: figure out how to pass the image to End Creation, 
+import {React, useState} from "react";
 
-import React from "react";
 
 
 export default function ArtWorkChoices (props) {
     const { artwork } = props;
     const { title, id, artist_display, date_display, image_id } = artwork;
-
+    const [artid, setArtid] = useState('');
+    
    // possible callback option --- need to grab the id of the selected artwork so it can be used in the next child 
     function handleSelectClick(e){
         e.preventDefault();
-
-        console.log(e.target.attributes.selectorid)
-
+        setArtid(e.target.attributes.selectorid.value);
     }
 
     //load selected false, display. load true 
@@ -28,17 +26,8 @@ export default function ArtWorkChoices (props) {
         )}
 
 
-//TODO STYLING: can I add like a golden frame around the artwork?, also make the search images smaller maybe, highlight a boarder around selected artwork
+//TODO STYLING: also make the search images smaller maybe
 /*
-
-class ArtWorkChoices extends React.Component{
-    constructor(props) {
-        super(props);
-        this.state = {id: 27992}
-    }
-}
-
-useEffect????? for the sleect button?????
 
 
 */

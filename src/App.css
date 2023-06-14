@@ -74,3 +74,12 @@ div {
   float: none;
   align-items: center;
 }
+
+#webcam {
+  border: 30px ridge red;
+  max-width: 100%;
+}
+
+img {
+  border: 30px ridge black;
+}
