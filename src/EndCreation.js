@@ -13,6 +13,7 @@ export default function DisplayStare(props){
             <img id="artimage" src={`https://www.artic.edu/iiif/2/${image_id}/full/843,/0/default.jpg`}/>
             <img src={imageSource} alt="selfie" imageid="imageId"/>
             Museum Stare
+
         </div>
     )
 }
