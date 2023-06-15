@@ -54,10 +54,6 @@ h1 {
  
 }
 
-div {
-  border: 1px solid red;
- 
-}
 
 #artworkcontainer {
   border: 1px solid purple;
@@ -76,10 +72,10 @@ div {
 }
 
 #webcam {
-  border: 30px ridge red;
-  max-width: 100%;
+  border: 30px ridge black;
+  max-width: 843px;
 }
 
 img {
-  border: 30px ridge black;
+  border: 30px ridge red;
 }

@@ -1,13 +1,14 @@
 import { React, useEffect, useState} from "react";
 import ArtWorkChoice from "./ArtWork";
+import DisplayStare from "./EndCreation";
 
 //TODO: make artwork selectable, clear results for a new search?, id things so the css can work
 
-
-export default function SearchArt() {
+export default function SearchArt(props) {
+    const { imageSource } = props;
     const [searchInput, setSearchInput] = useState('');
     const [artwork, setArtwork] = useState([]);
-    //const [artid, setArtid] = useState([]);
+    const [artid, setArtid] = useState([]);
 
     //setID should go through props
     
@@ -17,12 +18,11 @@ export default function SearchArt() {
                 .then(results => results.json())
                // .then(results => console.log(results))
                 .then(data => {
-                    console.log(data.data);
+                    //console.log(data.data);
                     setArtwork([...artwork, ...data.data])}
                     );
         }
-        //LOGIC
-    }, [searchInput]);
+    }, [searchInput, artid]);
 
     function handleArtSearchSubmit(e) {
         e.preventDefault();
@@ -32,14 +32,14 @@ export default function SearchArt() {
 
     return (
         <div className="ArtWorkSearch" id="artworksearch">
-            <h3>The default option is {}</h3>
             <form onSubmit={handleArtSearchSubmit}>
                 <input type="text" id="art-search"/>
                 <button >Search</button>
             </form>
             <div className="artworkinfodisplay">
-                {artwork.map(artwork => <ArtWorkChoice artwork={artwork} setArtid={setArtid} />)}
+                {artwork.map(artwork => <ArtWorkChoice artwork={artwork} setArtid={setArtid} imageSource={imageSource}/>)}
             </div>
+            
         </div>
     )
 }

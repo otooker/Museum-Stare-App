@@ -2,8 +2,9 @@ import React from "react";
 import Webcam from "react-webcam";
 import { useCallback, useRef, useState } from "react";
 import SearchArt from "./Search";
+import DisplayStare from "./EndCreation";
 
-//TODO: make retake button for webcam, upload button -- display photo uploaded. Props will be used to transfer img? ???
+//TODO: mirror webam?, make retake button for webcam, upload button -- display photo uploaded. Props will be used to transfer img? ???
 
 export default function YourImage() {
 
@@ -33,11 +34,10 @@ export default function YourImage() {
             {imageSource && <div>
                 <h2>Your Photo here:</h2>
                 <img src={imageSource} alt="selfie" imageid="imageId"/>
-                <button>Retake Selfie</button>
+               
                 </div>}
           
-            <SearchArt />
-
+            <SearchArt imageSource={imageSource}/>
         </div>
     );
 };
@@ -45,3 +45,4 @@ export default function YourImage() {
 
 //TODO STYLING: make a min/max for the webcam and picture, imitate Ferris Bueller red for title
 // MAYBE TO DO: upload image possibility  <input type="file" accept="image/*" />
+//<button>Retake Selfie</button>
