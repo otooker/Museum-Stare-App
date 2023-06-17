@@ -4,7 +4,7 @@ import { useCallback, useRef, useState } from "react";
 import SearchArt from "./Search";
 
 
-//TODO: mirror webam?, make retake button for webcam, upload button -- display photo uploaded. Props will be used to transfer img? ???
+//TODO: mirror webam?, make retake button for webcam
 
 export default function YourImage() {
 
@@ -43,6 +43,6 @@ export default function YourImage() {
 };
 
 
-//TODO STYLING: make a min/max for the webcam and picture, imitate Ferris Bueller red for title
+//TODO STYLING: make a min/max for the webcam and picture
 // MAYBE TO DO: upload image possibility  <input type="file" accept="image/*" />
 //<button>Retake Selfie</button>

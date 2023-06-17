@@ -9,8 +9,6 @@ export default function SearchArt(props) {
     const [searchInput, setSearchInput] = useState('');
     const [artwork, setArtwork] = useState([]);
     const [artid, setArtid] = useState([]);
-
-    //setID should go through props
     
     useEffect(() => {
         if (searchInput) {

@@ -41,27 +41,4 @@ export default function ArtWorkChoices(props) {
 /*
 
 
-   if (artid === '') {
-        return (
-            <div id="artworkcontainer">
-            {image_id &&  <div className="artinfo" id={id}>
-                <img id="artimage" src={`https://www.artic.edu/iiif/2/${image_id}/full/843,/0/default.jpg`}/>
-                <h3>{title}</h3>
-                <p>artist: {artist_display}, date: {date_display} </p> 
-                <button onClick={() => (handleSelectClick)} selectorid={id} >Select this piece of art</button>
-            </div>}
-       
-            </div>
-            )
-    } else {
-        return (<div>WORKING?
-            <DisplayStare setArtid={setArtid} artid={artid} image_id={image_id} imageSource={imageSource}/>
-            
-        </div>)
-    }
-
- function fetchFinalArtImage() {
-
-    }
-
 */
