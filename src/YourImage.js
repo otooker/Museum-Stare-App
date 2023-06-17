@@ -2,7 +2,7 @@ import React from "react";
 import Webcam from "react-webcam";
 import { useCallback, useRef, useState } from "react";
 import SearchArt from "./Search";
-import DisplayStare from "./EndCreation";
+
 
 //TODO: mirror webam?, make retake button for webcam, upload button -- display photo uploaded. Props will be used to transfer img? ???
 
