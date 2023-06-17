@@ -10,9 +10,9 @@ export default function DisplayStare(props){
 
     return (
         <div className="MuseumStare" id="museumstare">
+            <h1>Have a Profound Moment</h1>
             <img id="artimage" src={`https://www.artic.edu/iiif/2/${image_id}/full/843,/0/default.jpg`}/>
             <img src={imageSource} alt="selfie" imageid="imageId"/>
-            Museum Stare
 
         </div>
     )
