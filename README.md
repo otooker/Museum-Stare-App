@@ -1,3 +1,9 @@
+<h1>Museum Stare Web Application</h1>
+
+<p>My friends, this was fun and frustrating. Honestly, I want to work on this ASAP now that I've let React cook in my head long enough -- when I posted this here, React was a new mortal enemey. Now, we're frenemies, and I look forward to moments we can both grit our teeth and work together</p>
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
